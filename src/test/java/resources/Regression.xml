@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="RegressionTest">
-    <!--<listeners>-->
-        <!--<listener class-name="org.uncommons.reportng.HTMLReporter" />-->
-        <!--<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />-->
-    <!--</listeners>-->
-    <!--<test name="phptravel" group-by-instances="true">-->
-        <!--<groups>-->
-            <!--<run>-->
-                <!--<include name="Positive_Secnario"> </include>-->
-                <!--<include name="Negative_Secnario"></include>-->
-            <!--</run>-->
-        <!--</groups>-->
-        <!--<classes>-->
-            <!--<class name="com.test.suite.loginTestScenarios"></class>-->
-        <!--</classes>-->
-    <!--</test>-->
+    <suite name="System Testing" parallel="none" thread-count="1">
+        <listeners>
+            <listener class-name="org.uncommons.reportng.HTMLReporter" />
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        </listeners>
+        <test name="MenuTest" verbose="0">
+    <classes>
+        <class name="com.testsuite.login.LoginTestSuite"/>
+        <class name="com.testsuite.login.TestClassTwo"/>
+        <class name="com.testsuite.login.WebDriverInstance"/>
+    </classes>
+</test>
 </suite>
